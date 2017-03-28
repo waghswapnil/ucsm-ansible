@@ -1,0 +1,21 @@
+---
+# This role contains task for server power operations
+
+- name: power off server
+  cisco_ucs_server_power:
+    chassis_id: 1
+    blade_id: 1
+    power_state: "off"
+    ip: "{{ ucs_ip }}"
+    username: "{{ ucs_username }}"
+    password: "{{ ucs_password }}"
+
+
+- name: power on server
+  cisco_ucs_server_power:
+    chassis_id: 1
+    blade_id: 1
+    power_state: "on"
+    ip: "{{ ucs_ip }}"
+    username: "{{ ucs_username }}"
+    password: "{{ ucs_password }}"
